@@ -35,6 +35,8 @@ const removeAllBtn = document.getElementById("remove-all-button");
 
 removeAllBtn.addEventListener("click", removeAll);
 
-
+function removeAll() {
+        spottedAnimals.innerHTML= " ";
+}
 
 
