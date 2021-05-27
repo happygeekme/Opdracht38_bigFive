@@ -18,6 +18,24 @@ function addToSpottedList(event){
         spottedAnimals.appendChild(newLi);
 }
 
+// nakijken opdracht 1
+// opdracht 1
+const animalButtons = document.querySelectorAll(".big-five-button");
+​
+const spottedAnimals = document.querySelector("#spotted-animals-list");
+​
+animalButtons.forEach(function (animalButton) {
+    animalButton.addEventListener("click", addToSpottedList);
+})
+​
+function addToSpottedList(event) {
+    const newP = document.createElement("p");
+    newP.innerHTML = event.target.innerHTML;
+    const newLi = document.createElement("li");
+    newLi.appendChild(newP);
+    newLi.classList.add("spotted-animals-list-item");
+    spottedAnimals.appendChild(newLi);
+}
 
 // opdracht 2
 const removeFirstItemBtn = document.getElementById("remove-first-item-button");
@@ -36,7 +54,7 @@ const removeAllBtn = document.getElementById("remove-all-button");
 removeAllBtn.addEventListener("click", removeAll);
 
 function removeAll() {
-        spottedAnimals.innerHTML= " ";
+        spottedAnimals.innerHTML= "";
 }
 
 
